@@ -1,8 +1,9 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-console.log("API Key", process.env.API_KEY);
-console.log("PORT", process.env.PORT);
+// console.log("API Key", process.env.API_KEY);
+// console.log("PORT", process.env.PORT);
+
 const PORT = process.env.PORT;
 const API_Key = process.env.API_KEY;
 const path = require("path");
