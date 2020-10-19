@@ -30,17 +30,17 @@ app.get("/test", (req, res) => {
   res.send(mockAPIResponse);
 });
 
-app.post('/document',(req,res)=>{
-const resp = await fetch(`${URL}${API_Key}&lang=en&url=${req.body}`);
-try{
+app.post("/document", async (req, res) => {
+  const resp = await fetch(`${URL}${API_Key}&lang=en&url=${req.body}`);
+  try {
     const data = await resp.json();
     console.log(data);
-    resp.send(data);
-}catch(err){
+    res.send(data);
+  } catch (err) {
     console.log(err);
-}
+  }
 });
 
-app.listen(PORT, ()=>{
-console.log(`Listening on ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });

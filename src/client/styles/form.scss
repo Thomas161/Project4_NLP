@@ -1,0 +1,20 @@
+form {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //   background-color: beige;
+}
+input {
+  width: 300px;
+  height: 30px;
+}
+
+#submit {
+  background-color: rgb(53, 141, 53);
+  color: rgb(221, 203, 203);
+  box-shadow: 5px 5px 30px;
+  border-radius: 12px;
+  font-size: 20px;
+}
