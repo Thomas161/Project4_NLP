@@ -29,12 +29,12 @@ app.get("/test", (req, res) => {
   res.send(mockAPIResponse);
 });
 
-app.post('document',(req,res)=>{
-const res = await fetch(`${URL}${API_Key}&lang=en&url=${req.body}`);
+app.post('/document',(req,res)=>{
+const resp = await fetch(`${URL}${API_Key}&lang=en&url=${req.body}`);
 try{
-    const data = await res.json();
+    const data = await resp.json();
     console.log(data);
-    res.send(data);
+    resp.send(data);
 }catch(err){
     console.log(err);
 }

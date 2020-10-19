@@ -5,9 +5,33 @@
     <title>NLP</title>
   </head>
   <body>
-    <main>
-      <section></section>
-    </main>
+    <div id="container">
+      <header>
+        <h2>Evaluated News</h2>
+      </header>
+      <main>
+        <section>
+          <form action="">
+            <input type="text" id="url" placeholder="http://" />
+            <input
+              type="submit"
+              id="submit"
+              onclick="return Client.handleSubmit(event)"
+              onsubmit="return Client.handleSubmit(event)"
+            />
+          </form>
+        </section>
+        <section>
+          <article>
+            <h4 id="score"></h4>
+            <h4 id="img"></h4>
+            <h4 id="subjectivity"></h4>
+            <h4 id="confidence"></h4>
+            <h4 id="irony"></h4>
+          </article>
+        </section>
+      </main>
+    </div>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
