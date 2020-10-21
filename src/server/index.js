@@ -13,11 +13,11 @@ const app = express();
 
 const URL = "https://api.meaningcloud.com/sentiment-2.1?key=";
 
-const cors = require("cors");
-app.use(cors());
-
 const bodyParser = require("body-parser");
 app.use(bodyParser.text());
+
+const cors = require("cors");
+app.use(cors());
 
 app.use(express.static("dist"));
 

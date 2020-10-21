@@ -2,7 +2,14 @@ import fetch from "node-fetch";
 
 const { urlChecker } = require("./urlChecker");
 
-export function handleSubmit(evt) {
+/**Global Variables for DOM */
+let score = document.querySelector("#score");
+let imageTag = document.querySelector("#img");
+let subjectivity = document.querySelector("#subjectivity");
+let confidence = document.querySelector("#confidence");
+let irony = document.querySelector("#irony");
+
+function handleSubmit(evt) {
   evt.preventDefault();
 
   let urlText = document.getElementById("url").value;
@@ -24,6 +31,14 @@ export function handleSubmit(evt) {
       .then((res) => res.json())
       .then((data) => {
         console.log("Data returned from UI", data);
+
+        score.innerHTML = data.score_tag;
+        subjectivity.innerHTML = data.subjectivity;
+        confidence.innerHTML = data.confidence;
+        irony.innerHTML = data.irony;
       });
+  } else {
+    console.log("Invalid url");
   }
 }
+export { handleSubmit };
