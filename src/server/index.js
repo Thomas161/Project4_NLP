@@ -4,7 +4,6 @@ dotenv.config();
 // console.log("API Key", process.env.API_KEY);
 // console.log("PORT", process.env.PORT);
 
-const PORT = process.env.PORT;
 const API_Key = process.env.API_KEY;
 const path = require("path");
 const mockAPIResponse = require("./mockAPI");
@@ -41,6 +40,6 @@ app.post("/document", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on ${PORT}`);
+app.listen(8080, () => {
+  console.log(`Listening on 8080`);
 });

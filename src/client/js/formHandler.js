@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 const { urlChecker } = require("./urlChecker");
 
-function handleSubmit(evt) {
+export function handleSubmit(evt) {
   evt.preventDefault();
 
   let urlText = document.getElementById("url").value;
@@ -27,5 +27,3 @@ function handleSubmit(evt) {
       });
   }
 }
-
-export { handleSubmit };
