@@ -31,7 +31,8 @@ function handleSubmit(evt) {
       .then((res) => res.json())
       .then((data) => {
         console.log("Data returned from UI", data);
-
+        document.getElementsByTagName("article")[0].style.visibility =
+          "visible";
         score.innerHTML = data.score_tag;
         subjectivity.innerHTML = data.subjectivity;
         confidence.innerHTML = data.confidence;
