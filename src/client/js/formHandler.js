@@ -1,22 +1,21 @@
-import fetch from "node-fetch";
+const { fetch } = require("node-fetch");
 
-const { urlChecker } = require("./urlChecker");
+import { checkTheUrl } from "./urlChecker.js";
 
 /**Global Variables for DOM */
 let score = document.querySelector("#score");
-let imageTag = document.querySelector("#img");
 let subjectivity = document.querySelector("#subjectivity");
 let confidence = document.querySelector("#confidence");
 let irony = document.querySelector("#irony");
 
-function handleSubmit(evt) {
+export function handleSubmit(evt) {
   evt.preventDefault();
 
   let urlText = document.getElementById("url").value;
   console.log("Submitted");
 
   //check url is valid
-  if (urlChecker) {
+  if (checkTheUrl) {
     console.log("Valid url");
 
     fetch("http://localhost:8080/document", {
@@ -42,4 +41,3 @@ function handleSubmit(evt) {
     console.log("Invalid url");
   }
 }
-export { handleSubmit };

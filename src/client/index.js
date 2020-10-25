@@ -1,11 +1,11 @@
-import { urlChecker } from "./js/urlChecker";
-import { handleSubmit } from "./js/formHandler";
+import { checkTheUrl } from "./js/urlChecker.js";
+import { handleSubmit } from "./js/formHandler.js";
 
 import "./styles/background.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
 import "./styles/data.scss";
-// console.log(urlChecker);
+// console.log(checkTheUrl);
 // console.log(handleSubmit);
 
-export { urlChecker, handleSubmit };
+export { checkTheUrl, handleSubmit };
