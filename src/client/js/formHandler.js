@@ -1,4 +1,4 @@
-const { fetch } = require("node-fetch");
+const fetch = require("node-fetch");
 
 import { checkTheUrl } from "./urlChecker.js";
 
@@ -18,15 +18,16 @@ export function handleSubmit(evt) {
   if (checkTheUrl) {
     console.log("Valid url");
 
-    fetch("http://localhost:8080/document", {
-      method: "POST",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "text/plain",
-      },
-      body: urlText,
-    })
+    window
+      .fetch("http://localhost:8080/document", {
+        method: "POST",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+        body: urlText,
+      })
       .then((res) => res.json())
       .then((data) => {
         console.log("Data returned from UI", data);
@@ -37,7 +38,7 @@ export function handleSubmit(evt) {
   }
 }
 
-export const updateHTML = (d) => {
+export const updateHTML = (data) => {
   document.getElementsByTagName("article")[0].style.visibility = "visible";
   score.innerHTML = data.score_tag;
   subjectivity.innerHTML = data.subjectivity;
