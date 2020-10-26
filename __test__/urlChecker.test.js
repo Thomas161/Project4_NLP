@@ -20,4 +20,19 @@ describe("url protocol is attached", () => {
   });
 });
 
+describe("no protocol attached", () => {
+  test("returns true", () => {
+    const inputNoProto = "www.facebook.com";
+    expect(checkTheUrl(inputNoProto)).toBe(true);
+  });
+  test("returns true", () => {
+    const inputNoProto = "github.com";
+    expect(checkTheUrl(inputNoProto)).toBe(true);
+  });
+  test("should return false, invalid url", () => {
+    const input = "twitter  . com ";
+    expect(checkTheUrl(input)).toBe(false);
+  });
+});
+
 // console.log("test", checkTheUrl);
