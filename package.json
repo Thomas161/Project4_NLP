@@ -9,8 +9,8 @@
     "reinstall": "npm run clean && npm install",
     "test": "jest --coverage",
     "start": "node src/server/index.js",
-    "build-dev": "webpack-dev-server --config webpack.dev.js --open",
-    "build-prod": "webpack --config webpack.prod.js"
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "webpack": "^4.44.2",
-    "webpack-cli": "^4.1.0",
+    "webpack-cli": "^3.3.12",
     "whatwg-fetch": "^3.4.1"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "sass-loader": "^10.0.4",
     "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.0.1",
+    "terser-webpack-plugin": "^4.2.2",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.2.0",
     "workbox-webpack-plugin": "^5.1.4"
