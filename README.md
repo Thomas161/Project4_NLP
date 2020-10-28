@@ -29,5 +29,5 @@ npm run build-prod
 ```
 
 ## Issues
-```python terser-webpack plugin``` was omitted and not included in production build as it threw an error in production build, this article helped solve the problem
+**terser-webpack plugin**  was omitted and not included in production build as it threw an error in production build, this article helped solve the problem
 https://medium.com/@omril321/fixing-overly-aggressive-optimization-with-terser-f07309761b50
