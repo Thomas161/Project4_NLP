@@ -29,6 +29,6 @@ npm run build-prod
 ```
 
 ## Issues
-**npm i --save-dev jest@24.0.0** was specific version i installed that allowed tests to run, otherwise syntaxError:Unexpected token would stop be thrown inside node_modules 
+**npm i --save-dev jest@24.0.0** was specific version i installed that allowed tests to run, otherwise syntaxError:Unexpected token errors would be thrown inside node_modules 
 **terser-webpack plugin**  was omitted and not included in production build as it threw an error in production build, this article helped solve the problem
 https://medium.com/@omril321/fixing-overly-aggressive-optimization-with-terser-f07309761b50
